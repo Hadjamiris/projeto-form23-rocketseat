@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>multi step form boaracodar #23</title>
+</head>
+
+    <body>
+        <main id="app">
+            <form>
+                <div class="step-progress">
+                    <strong data-step class="active done">Contato</strong>
+                    <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.37256 2.0219L8.29317 7.9425L2.37256 13.8631" stroke="#323238" stroke-width="2" stroke-linecap="square" />
+                    </svg>
+                    <strong data-step class="active">Empresa</strong>
+                    <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.37256 2.0219L8.29317 7.9425L2.37256 13.8631" stroke="#323238" stroke-width="2" stroke-linecap="square" />
+                    </svg>
+                    <strong data-step>Projeto</strong>
+                </div>
+
+                <div class="form-step active">
+                    <div class="content">
+                        <div class="input-wrapper">
+                            <label for="name">Nome</label>
+                            <input id="name" name="name" type="text" placeholder="Como prefere ser chamado" required />
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="phone">Telefone</label>
+                            <input id="phone" name="phone" type="text" placeholder="Digite seu número de Whatsapp" onkeypress="return /\d/.test(event.key)" />
+                        </div>
+                        
+                        <div class="input-wrapper">
+                            <label for="email">E-mail</label>
+                            <input id="email" name="email" type="email" placeholder="Digite seu e-mail" required />
+                        </div>
+                    </div>
+
+                    <div class="button-wrapper justify-end">
+                        <button type="button" class="btn primary" data-action="next">CONTINUAR</button>
+                    </div>
+                </div>
+
+                <div class="form-step hide">
+                    <div class="content">
+                        <div class="input-wrapper">
+                            <label for="busineiss-name">Nome da Empresa</label>
+                            <input id="busineiss-name" name="busineiss-name" type="text" placeholder="Qual nome da empresa" required />
+                        </div>
+                    
+                        <div class="input-wrapper">
+                            <label for="busineiss-colab-number">Número de Funcionários</label>
+                            <input id="busineiss-colab-number" name="busineiss-colab-number" type="text" placeholder="Digite o número de colaboradores" onkeypress="return /\d/.test(event.key)" />
+                        </div>
+                    
+                        <div class="input-wrapper">
+                            <label for="busineiss-about">Sobre seu negócio</label>
+                            <textarea id="busineiss-about" name="busineiss-about" placeholder="Fale um pouco sobre seus produtos e serviços"></textarea>
+                        </div>                                   
+                              
+                    </div>
+
+                    <div class="button-wrapper">
+                        <button type="button" class="btn secondary" data-action="prev">VOLTAR</button>
+                        <button  type="button" class="btn primary" data-action="next">CONTINUAR</button>
+                    </div>
+                </div>
+
+                <div class="form-step hide">
+                    <div class="content">
+                        <div class="input-wrapper">
+                            <label for="project">Objetivos do projeto</label>
+                            <textarea id="project" name="project" placeholder="Descreva quais objetivos deste projeto"></textarea>
+                        </div>      
+                    </div>
+
+                    <div class="button-wrapper">
+                        <button  type="button" class="btn secondary" data-action="prev">VOLTAR</button>
+                        <button class="btn primary" type="submit">ENVIAR RESPOSTA</button>
+                    </div>  
+                </div>
+            </form>                
+        </main>
+        <script src="codigo.js"></script>
+    </body>
+</html>
+          
+    
+                  
+ 
